@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recursividad</title>
+    <link rel="stylesheet" href="./css blogs/recursion.css"> <!-- Ajusta la ruta si es necesario -->
+    <link rel="icon" href="../assets/favicon.ico"type="image/png">
+</head>
+<body>
+    <header>
+        <h1>Recursividad</h1>
+    </header>
+
+    <main class="container-recursividad">
+        <article>
+            <h2>¿Qué es la recursividad?</h2>
+            <p>En términos simples, es algo que ocurre cuando "algo" se invoca a sí mismo. Si hablas con un informático, te va a decir que es cuando una función es llamada a sí misma. 
+                Pero, es una respuesta algo limitada.
+                <br>
+                Es una forma de resolver problemas, una nueva forma de pensar. Es la idea de definir entidades en términos de sí mismos.
+                <br>
+                En el colegio nos decían que, si querías definir un concepto, no podías utilizar esa misma palabra dentro de la definición. La recursividad es justamente eso.</p>
+        
+
+        
+            <h3>El caso base</h3>
+            <p>Cuando uno quiere diseñar un algoritmo de manera recursiva, como un método se va a invocar a sí mismo, no puede hacerlo infinitas veces, en algún momento se debe detener.
+                 Bueno, el algoritmo para en estos llamados casos base.
+                 <br>
+                Son instancias del problema que se pueden resolver de manera inmediata sin necesidad de invocar a la función. Son aquellos casos más sencillos en los que no se necesita aplicar la recursividad.</p>
+        
+
+        
+            <h3>Veamos un ejemplo: la función factorial</h3>
+            <p>Indicamos el factorial de n como n!. Es el producto de los enteros desde 1 hasta n. Por ejemplo:
+
+                5! = 1 * 2 * 3 * 4 * 5 = 120.
+                <br>
+
+                
+                La función factorial es muy útil cuando queremos contar de cuántas maneras diferentes podemos ordenar o combinar cosas. Por ejemplo, el número de formas en que se pueden acomodar n elementos es:
+                
+                n! = n * (n - 1) * (n - 2) * ... * 2 * 1.
+                <br>
+
+                
+                Un punto interesante es la definición de 0!. Como no hay enteros mayores o iguales que 1 y menores o iguales que 0, se define que 0! = 1 por convención matemática y por coherencia con otras fórmulas combinatorias.
+            </p>
+       
+
+        
+            <h3>Divide y conquistarás</h3>
+            <p>Cuando diseñamos un algoritmo recursivo, seguimos estos pasos:
+                <br>
+                Definir el caso base.
+                <br>
+                Aplicar el concepto de inducción.
+                
+                La idea de inducción consiste en construir la solución de un problema a partir de soluciones a problemas más sencillos. Por ejemplo, si queremos ordenar una lista de n elementos, podemos resolver el problema para n - 1 elementos y extender la solución.
+                
+                La clave está en elegir bien los subproblemas para acercarnos al caso base.
+                <br>
+                Podemos dividir el problema en n-1, n-2, o cualquier subproblema válido que simplifique la solución.</p>
+        
+
+       
+            <h3>¿Recursión o Iteración?</h3>
+            <p>Dado que la recursión es una forma alternativa de pensar, surge la pregunta: ¿Cuándo es mejor usar recursión y cuándo iteración?
+
+                Cualquier algoritmo iterativo puede transformarse en recursivo y viceversa. Sin embargo, algunas recomendaciones son:
+                <br>
+                Si el problema involucra estructuras de datos lineales como arrays o matrices, los algoritmos iterativos suelen ser más eficientes.
+                <br>
+                Si el problema tiene una estructura de árbol o grafo, la recursión suele ser una mejor opción.
+                <br>
+                Si la función recursiva solo contiene una llamada recursiva (recursión lineal), la iteración puede ser más eficiente.
+                <br>
+                Sin embargo, la recursión puede generar problemas de memoria si hay demasiadas llamadas anidadas, lo que puede provocar un stack overflow (desbordamiento de pila). Por eso, en procesos lineales con muchas llamadas, la iteración suele ser preferible.
+                <br>
+                Si un algoritmo tiene dos o más llamados recursivos, es recomendable usar recursividad, ya que el código suele ser más claro y conciso.
+                <br>
+                En definitiva, elegir entre recursión e iteración depende del problema y de la eficiencia deseada. ¡La clave está en analizar bien la estructura del problema! 🚀</p>
+        </article>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 - Santiago Centurion Cohen</p>
+    </footer>
+</body>
+</html>
